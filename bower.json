@@ -1,0 +1,29 @@
+{
+  "name": "delta",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "v1.4.8",
+    "angular-keycode": "v1.0.5",
+    "angular-aria": "v1.4.8",
+    "angular-material": "v1.0.1",
+    "angular-bootstrap": "v0.14.3",
+    "angular-local-storage": "v0.2.3",
+    "angular-loading-bar": "v0.8.0",
+    "font-awesome": "v4.5.0",
+    "angular-ui-grid": "~3.0.7",
+    "bootstrap": "3.3.6",
+    "oclazyload": "v1.0.9",
+    "angular-messages": "~1.4.8"
+  }
+}
