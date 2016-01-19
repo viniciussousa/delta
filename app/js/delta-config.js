@@ -1,1 +1,1 @@
-angular.module('delta',['ngMessages','toastr','ui.grid']) //declaracao do module principal
+angular.module('delta',['ngMessages','toastr','ui.grid','ngMaterial']) //declaracao do module principal
