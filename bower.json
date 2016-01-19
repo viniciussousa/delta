@@ -23,7 +23,8 @@
     "font-awesome": "v4.5.0",
     "angular-ui-grid": "~3.0.7",
     "bootstrap": "3.3.6",
-    "oclazyload": "v1.0.9",
-    "angular-messages": "~1.4.8"
+    "oclazyload": "~1.0.9",
+    "angular-messages": "~1.4.8",
+    "angular-ui-router": "ui-router#~0.2.15"
   }
 }
