@@ -1,8 +1,8 @@
 angular.module('delta').controller('IndexController', IndexController);
 
-IndexController.$inject = ['$scope','$timeout', 'AlertService', '$filter'];
+IndexController.$inject = ['$scope','$timeout', 'AlertService', '$filter','$rootScope'];
 
-function IndexController($scope, $timeout, AlertService, $filter){
+function IndexController($scope, $timeout, AlertService, $filter,$rootScope){
 
     $scope.listaDePessoas = [];
     $scope.entidade = {};
@@ -77,4 +77,16 @@ function IndexController($scope, $timeout, AlertService, $filter){
         return style;
     }
 
+    $scope.dispararEvento = function(){
+        $rootScope.$broadcast('testeBroadcastEvent', {nome : 'Vinicius'})
+    };
+
+    $rootScope.$on('$stateChangeStart', stateChangeStart);
+
+    function stateChangeStart(event, toState, toParams, fromState, fromParams){
+        if(toState.name === 'cadastroPessoa'){
+            AlertService.showError('Voce não possui permissão para acessar esta tela');
+            event.preventDefault();
+        }
+    }
 }
