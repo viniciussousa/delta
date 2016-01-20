@@ -10,6 +10,6 @@ function PesquisaPessoaController($scope, $state, AlertService){
 
     $scope.$on('testeBroadcastEvent', function(event){
        var teste = event;
-        AlertService.showSuccess(teste);
+        AlertService.showWarning(teste);
     });
 }
