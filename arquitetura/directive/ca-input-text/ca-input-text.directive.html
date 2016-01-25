@@ -1,0 +1,11 @@
+<div ng-class="myColspan">
+    <div class="form-group">
+        <label class="control-label" ng-bind="label" >
+            <i class="fa fa-asterisk"></i>
+        </label>
+        <label ng-if="ngRequired" style="color: red">
+            <i class="fa fa-asterisk"></i>
+        </label>
+        <input type="text" class="form-control" ng-model="ngModel" ng-required="ngRequired">
+    </div>
+</div>

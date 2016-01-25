@@ -17,7 +17,6 @@
     <script src="bower_components/angular-messages/angular-messages.js"></script>
     <script src="bower_components/angular-toastr-master/dist/angular-toastr.tpls.js"></script>
     <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
-
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
@@ -26,32 +25,28 @@
 
     <script src="app/js/delta.module.js"></script>
     <script src="app/js/delta-config.js"></script>
-    <script src="app/js/controller/index.controller.js"></script>
+    <script src="app/js/controller/index.controller4.js"></script>
+
     <script src="arquitetura/service/alert-service.js"></script>
     <script src="arquitetura/filter/maiusculo.js"></script>
+    <script src="arquitetura/directive/ca-span/ca-span.directive.js"></script>
+    <script src="arquitetura/directive/ca-input-text/ca-input-text.directive.js"></script>
+
 </head>
 <body ng-app="delta">
-<div ng-controller="IndexController" class="container">
-    <div>
-        <button class="btn btn-default" ng-click="dispararEvento();">
-            Disparar Evento
-        </button>
-        <button class="btn btn-default" ui-sref="home">
-            Home
-        </button>
-        <button class="btn btn-success" ui-sref="menu">
-            Menu
-        </button>
-        <button class="btn btn-warning" ui-sref="cadastroPessoa">
-            Cadastro Pessoa
-        </button>
-        <button class="btn btn-danger" ui-sref="pesquisaPessoa">
-            Pesquisa Pessoa
-        </button>
+<div ng-controller="IndexController4 as vmIndex" class="container">
+    <ca-span texto="Vinícius Sousa"></ca-span>
+
+    <div class="row">
+        <ca-input-text label="Nome" colspan="4" ng-model="vmIndex.entidade.nome" ng-required="true">
+        </ca-input-text>
+        <ca-input-text label="Sobrenome" colspan="4" ng-model="vmIndex.entidade.sobrenome" >
+        </ca-input-text>
     </div>
-    <div>
-        <div ui-view></div>
-    </div>
+
+    {{vmIndex.entidade}}
 </div>
+
+
 </body>
 </html>

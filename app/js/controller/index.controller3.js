@@ -1,6 +1,6 @@
 angular.module('delta').controller('IndexController3', IndexController3);
 
-IndexController3.$inject = ['$scope'];
+/* @ngInject */
 
 function IndexController3($scope){
 
